@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <meta charset="utf-8">
+     <meta name="description" content="Orinoco un site de e-commerce, création d'application thématique, vente et commande de produit en ligne"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+     <link rel="stylesheet" href="css/style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/404c6f2bd0.js" crossorigin="anonymous"></script>
+     <title>Orinoco</title>
+</head>
+<body>
+<header>
+    <nav>
+       <a href="index.html" class="logo"><i class="fas fa-shopping-cart fa-3x"></i><h1>Orinoco</h1></a>
+            <ul>
+              <li>
+                <a href="index.html"><i class="fa fa-home"></i> Accueil</a>
+              </li>
+              <li class="panier">
+                  <a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier </a> 
+              </li>
+            </ul>
+    </nav>
+</header>
+<div class="conteneur-titre">
+  <h2>Choix des Ours en peluche</h2>
+</div>
+<div id="produits"></div>
+<div id="conteneurCouleur"> 
+  <label for="couleur_select" id="label_couleur">Couleur</label>
+  <select name="couleur" id="couleur_select">
+    <option value="" disabled selected>Choix des couleurs</option>
+  </select>
+  <label for="quantite" id="quantité">Quantité</label>
+  <select id="quantite">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <button type="button" id="bouton_produit">Ajouter au panier</button>
+</div> 
+<footer>
+  <div id="contact">
+    <a href="index.html"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
+    <a href="index.html"><i class="fab fa-twitter-square fa-lg"></i> Twitter</a>
+    <a href="mailto:contact@orinoco.com"><i class="fas fa-mail-bulk fa-lg"></i> Contact</a>
+  </div>  
+  <div id="footer"><p>© Orinoco 2020 -Tous droits résérvés.</p></div>
+</footer>
+<script src="js/produit.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

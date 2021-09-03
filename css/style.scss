@@ -1,0 +1,579 @@
+                          //Variables
+
+//couleur
+$violet : #7303c0;
+$violet1: #b882ee;
+$lightviolet: #D8BFD8;
+$violet2: #7B68EE;
+$white: #fff;
+$black: #000000;
+$grey: #A9A9A9;
+$blue: #4169E1;
+$gradientviolet: -webkit-linear-gradient(top, #c47868 0%,#ab6aae 50%,#905cfc 88%);
+$red: #FF0000;
+
+//fonts variables
+$roboto: 'Roboto', sans-serif;
+$pattaya: 'Pattaya', sans-serif;
+$love: 'Love Ya Like A Sister', cursive;
+
+//mixins
+@mixin classFlex{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin center{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin boutonblue{
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: $blue;
+  color: $white;
+  cursor: pointer;
+  border: none;
+  outline-style:none; 
+  text-transform: uppercase;
+  padding: 10px 10px;
+}
+
+@mixin h3-p{
+  width: 40%;
+  text-align: center;
+}
+
+           //Fin variables
+
+*{
+  @include center;
+  box-sizing: border-box;/* tous les éléments redimensionnés de la même manière*/
+  }
+
+body{
+  font-family: $roboto;
+}  
+
+//En-tête de la page
+header{
+  background-image: url("../background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-bottom: 60px;
+}
+
+h1{
+  font-family: $love;
+  color: #261624;
+  font-size: 3em;
+  text-shadow: 2px 2px 2px grey;
+ 
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+   
+  i{
+    background: $gradientviolet;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+//MENU
+nav{
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 60px 0 60px;
+  align-items: center;
+  width: 100%;
+  
+       li{
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 0px 20px;
+        border: 1px solid $white;
+        border-radius: 20px;
+        background-color: $violet;
+        font-size: 1.2em;
+        text-align: center;
+
+        &:hover{
+        background-color: $white;  
+        }
+
+        a{
+          text-decoration: none;
+          transition-duration: 1s;
+          color: $white;
+        
+        &:hover{
+         color: $violet;
+         cursor: pointer;
+        }
+
+        span{
+          padding-left: 5px;
+
+        }
+     }
+  }
+}
+
+//liste des peluches page index
+
+.conteneur-titre{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+   h2{
+    font-size: 2em;
+    font-family: $pattaya;
+    text-align: center;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 2px grey;
+
+    background: #EBDEF0;
+    padding: 30px 30px;
+    width: 500px;
+    border: 10px solid hsla(0,0%,100%,.5);
+   }
+}
+
+h3 , h4 {
+  font-family: $pattaya;
+}
+
+//-----------LA PARTIE PAGE INDEX------------
+
+#articles{
+  flex-direction: column;
+  @include classFlex;
+
+      img{
+       width: 90%;  
+  }
+}
+
+.elements{
+  width: 70%;
+  flex-direction: column;
+  @include classFlex;
+  box-shadow: 0 0 30px gray;
+  background-color: $lightviolet;
+  margin-bottom: 50px;
+
+  a{
+    color: $white;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: $violet;
+    text-decoration: none;
+    font-size: 1em;
+  }
+}
+
+//------------PARTIE PAGE PRODUIT-----------
+
+
+#produits{
+  @include classFlex;
+
+  img{
+    width: 70%;
+  }
+}
+
+.elementproduit{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 30px gray;
+  background-color: $lightviolet;
+  margin-bottom: 50px;
+
+  h4{
+    font-family: $roboto;
+    width: 70%;
+  }
+
+  p{
+    font-family: $pattaya;
+    font-size: 1.2em;
+  }
+}
+
+#conteneurCouleur{
+  @include classFlex;
+  flex-direction: column;
+  background-color: $violet1;
+  box-shadow: 0 0 30px gray;
+  width: 70%;
+  padding: 20px 0 20px 0;
+  margin: auto;
+  margin-bottom: 80px;
+  margin-top: -49px;
+
+  #label_couleur{
+    color: $white;
+    font-family: $pattaya;
+    font-size: 1.3em;
+  }
+}
+
+#couleur_select{
+  font-size: 1em;
+  padding: 3px;
+}
+
+#quantité{
+  color: $white;
+  font-family: $pattaya;
+  font-size: 1.3em;
+}
+
+#quantite{
+  padding: 3px;
+  width: 70px;
+  font-size: .9em;
+}
+
+#bouton_produit{
+  @include boutonblue;
+  margin-top: 10px;
+}
+
+//---------PARTIE PAGE PANIER--------------
+
+#panier{
+  padding: 20px 40px;
+  margin: 5px auto 80px;
+  width: 70%;
+  position: relative;
+  background-color: $lightviolet;
+  border-radius: 20px;  
+}
+
+.element_form{
+ 
+  span{
+    color: red;
+    font-family: $roboto;
+    font-size: .7em;
+  }
+  p{
+    color: red;
+    font-family: $roboto;
+    font-size: .7em;
+    text-align: center;
+  }
+}
+
+.elementpanier{
+  @include classFlex;
+}
+
+.elementpanier1{
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid hsla(0,0%,100%,.5);
+  padding: 5px 5px;
+  
+  h3,p{
+    width: 40%;
+    text-align: center;
+    font-family: $pattaya;
+    font-size: 1.3em;
+  } 
+  
+  .prix_panier{
+    width: 100px;
+  }
+}
+
+.prixtotal{
+  text-align: center;
+  margin: 20px 0 10px 0;
+  font-family: $pattaya;
+  font-size: 1.3em;
+  border: 10px solid hsla(0,0%,100%,.5);
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px; 
+}
+
+.conteneur_btn{
+  @include classFlex;
+  .bouton_supprime{
+    background-color: $red;
+    font-size: 1.1em;
+    color: $white;
+    border-radius: 20px;  
+    padding: 8px;
+    margin-top: 10px;
+    border: $white;
+  }
+}
+
+.conteneurLien{
+  @include classFlex;
+  margin: 20px 0 5px;
+  .btn_produit{
+    text-decoration: none;
+    @include boutonblue;
+  }
+}
+
+//FORMULAIRE
+main{
+  margin: auto;
+  width: 70%;
+  border: 5px double rgba(28,110,164,0.1);
+  border-radius: 40px 40px 40px 40px;
+}
+
+#conteneurmain{
+  background-color:#F8EFFC ; 
+  margin-bottom: 50px;
+  width: 70%;
+}
+
+.titre_form{
+  text-align: center;
+  font-size: 1.8em;
+  margin: -30px 0 20px 0;
+}
+
+.conteneur_formulaire{
+  @include classFlex;
+  font-size: 1.3em;
+  font-family: $pattaya;
+}
+
+input[type="text"], input[type="email"] {
+  width: 400px;
+  height: 30px;
+}
+
+input:invalid {
+  border: 2px solid #C0392B;
+  background-color: #F2D7D5;
+}
+input:focus:invalid {
+  color: #C0392B;
+}
+
+input:valid {
+  border: 2px solid #52BE80;
+  background-color:#E9F7EF;
+}
+
+.element_form{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+::placeholder {
+  font-size: 1.2em;
+}
+
+.conteneur_envoyer{
+  @include classFlex;
+.btn_envoyer{
+  font-size: .8em;
+  @include boutonblue;
+  padding: 10px 50px;
+  text-align: center;
+  margin-bottom: 15px;
+  }
+}
+
+//PARTIE PAGE CONFIRMATION
+
+#nom-confirmation{
+  @include classFlex;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0;
+  border-bottom: 5px outset #1C6EA4;
+  border-radius: 27px 27px 9px 9px;
+  background: $gradientviolet;
+  opacity: 0.9;
+  margin-bottom: 100px;
+
+  p{
+    padding: 10px 0;
+  }
+  
+  span{
+    color: $violet;
+    font-weight: bold;
+    font-family: $pattaya;
+    font-size: 1.2em;
+  }
+   
+  .para-detail{
+    font-size: 1.5em;
+    font-family: $pattaya;
+    text-align: center;
+  }
+  .para-detail1{
+    text-align: center; 
+    font-size: 1.2em;
+  }
+}
+
+//En Bas de ma page
+
+footer{
+  background-color: $violet1;
+  padding: 20px 40px;
+  font-size: 1em;
+
+  #contact{
+    display: flex;
+    justify-content: space-between;
+
+    i{
+      color: $blue;
+    } 
+
+    a{
+      text-decoration: none;
+      color: $black;
+  }
+ }
+}
+
+#footer{
+  display: block;
+
+  p{
+    text-align: center;
+    font-size: 1em;
+    padding-top: 20px;
+  }
+}
+
+
+@media screen and (min-width: 1024px) and(max-width:1280px){
+  .elementpanier1{
+    
+   h3,p{
+    @include h3-p;
+    } 
+  }
+
+}
+
+@media screen and (min-width: 768px) and(max-width:1024px){
+
+  .elementpanier1{
+    display: flex;
+    flex-direction: row;
+    
+    h3,p{
+      @include h3-p
+    }
+  }
+}
+
+//PARTIE REQUÊTES MÉDIA(responsive)
+@media screen and (max-width: 767px) {
+  
+  nav{
+
+    ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: nowrap;
+     font-size: 0.8em;
+     margin-top: 30px;
+     width: 100%;
+   }
+ }
+
+  .conteneur-titre{
+    width: 90%;
+    margin: auto;
+    h2{
+      font-size: 1.5em;
+    }
+  }
+
+  #panier{
+   margin: auto;
+   width: 90%;
+   margin-bottom: 50px;
+  
+}
+
+.elementpanier1{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  
+  h3, p{
+    width: 100%;
+  }
+}
+
+.element_panierh3{
+  text-align: center;
+}
+
+.conteneurLien{
+  text-align: center;
+}
+
+#conteneurmain{
+  width: 90%;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  height: 30px;
+}
+
+footer{
+  font-size: 1em;
+
+  #contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } 
+     
+  a{
+    width: 100px;
+    padding: 5px 0px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

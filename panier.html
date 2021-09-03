@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+     <meta charset="utf-8">
+     <meta name="description" content="Orinoco un site de e-commerce, création d'application thématique, vente et commande de produit en ligne"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+     <link rel="stylesheet" href="css/style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/404c6f2bd0.js" crossorigin="anonymous"></script>
+     <title>Orinoco</title>
+</head>
+<body>
+<header>
+        <nav>
+          <a href="index.html" class="logo"><i class="fas fa-shopping-cart fa-3x"></i><h1>Orinoco</h1></a>
+            <ul>
+              <li>
+                <a href="index.html"><i class="fa fa-home"></i> Accueil</a>
+              </li>
+              <li class="panier">
+                  <a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier </a> 
+              </li>
+            </ul>
+        </nav>
+</header>
+<div class="conteneur-titre">
+  <h2>Détails de votre Panier</h2> 
+</div>
+<div id="conteneur_panier">
+    <div id="panier"> </div>   
+</div>
+<h3 class="titre_form">Completer ce formulaire pour votre commande </h3>
+<main id="conteneurmain">
+ <div class="conteneur_formulaire">
+  <form  id="formulaire" class="element_form">
+    <div class="element_form">
+      <label for="lastName">Nom<span>*</span></label>
+      <input type="text" id="lastName" placeholder="Entrer votre Nom" required pattern="[a-zA-Z*(é|è|à|ù)\-\s]{2,30}">
+    </div> 
+    <div class="element_form">
+      <label for="firstName">Prénom<span>*</span></label>
+      <input type="text" id="firstName" placeholder="Entrer votre Prénom" required pattern="[a-zA-Z*(é|è|à|ù)\-\s]{2,30}">
+    </div>
+    <div class="element_form">
+      <label for="email">Adresse mail<span>*</span></label>
+      <input type="email" id="email" placeholder="exemple@hotmail.com" required  pattern="^[a-zA-Z0-9._%+-]+@{1}[a-zA-Z0-9._%+-]+[.]{1}[a-z]{2,10}$">
+    </div> 
+    <div class="element_form">
+      <label for="address">Adresse<span>*</span></label>
+      <input type="text" id="address" placeholder=" 1 rue .." required>
+    </div>
+    <div class="element_form">
+      <label for="code">Code Postal<span>*</span></label>
+      <input type="text" id="code" placeholder="10 000" required pattern="[0-9]{4,5}">
+    </div>
+    <div class="element_form">
+      <label for="city">Ville<span>*</span></label>
+      <input type="text" id="city" placeholder="Lyon, Reims, .." required pattern="[a-zA-Z*(é|è|à|ù)\-]{2,30}">
+    </div>
+    <div class="conteneur_envoyer">
+      <button type="submit" class="btn_envoyer">Envoyer</button>
+   </div>
+   <p>*Champs obligatoires</p>
+  </form>    
+ </div>
+</main>
+<footer>
+  <div id="contact">
+    <a href="index.html"><i class="fab fa-facebook-square fa-lg"></i> Facebook</a>
+    <a href="index.html"><i class="fab fa-twitter-square fa-lg"></i> Twitter</a>
+    <a href="mailto:contact@orinoco.com"><i class="fas fa-mail-bulk fa-lg"></i> Contact</a>
+  </div>  
+  <div id="footer"><p>© Orinoco 2020 -Tous droits résérvés.</p></div>
+</footer>
+<script src="js/panier.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

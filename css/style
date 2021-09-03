@@ -1,0 +1,17 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3e9f1;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  border: 2px solid red; }
+  main header {
+    width: 80%;
+    border: 2px solid green; }
+
+/*# sourceMappingURL=style.map */
