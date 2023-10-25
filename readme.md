@@ -6,5 +6,5 @@ Réalisation du site en HTML, CSS, Javascript et l'utilisation d'une API externe
 Vous devrez installer localement Node et npm
 
 #Installation
-Sur le terminal lancer le serveur à partir du dossier backend et exécutez npm install. Ensuite lancer la commande node serveur.
+Sur le terminal lancer le serveur à partir du dossier backend(dossier JWDP5-master) et exécutez npm install. Ensuite lancer la commande node serveur.
 Lancer l'application en allant sur index.html depuis le navigateur.
